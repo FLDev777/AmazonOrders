@@ -5,6 +5,9 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    // GitHub Pages project sites are served from /<repo>/, so root-absolute
+    // /assets/* URLs would 404 without this.
+    base: '/AmazonOrders/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
